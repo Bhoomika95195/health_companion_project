@@ -1,55 +1,100 @@
-# Health Companion - Ready-made MERN Boilerplate (Simplified)
+# Health & Wellness Companion 🩺
 
-This package is a starter implementation for *Project 2: Personalized Health & Wellness Companion*.
-It includes:
-- Backend: Node.js + Express + MongoDB with JWT authentication, biometric logging, and simple recommendation endpoints.
-- Frontend: React (Vite) with pages for register/login, profile (biometric logging), and a weight chart.
+A full-stack MERN application designed as a personalized health and wellness platform. [cite_start]This tool allows users to track their biometric data, receive personalized recommendations, and visualize their progress over time, acting as a smart personal trainer and nutritionist[cite: 490].
 
-## What's included
-- /server: Express backend
-- /client: React frontend (Vite)
+This project serves as a comprehensive final-year engineering project, demonstrating a full development lifecycle from setup to a feature-rich application.
 
-## Prerequisites
-- Node.js (v18+ recommended)
-- npm
-- MongoDB (local) or MongoDB Atlas connection string
+---
 
-## Setup & Run (development)
-1. Unzip the project if zipped.
-2. Backend:
-   - Open a terminal at `/server`
-   - Copy `.env.example` to `.env` and set `MONGODB_URI` and `JWT_SECRET`
-   - Run:
-     ```
-     npm install
-     npm run dev
-     ```
-   - Server will run on port 5000 by default.
+## ✨ Key Features
 
-3. Frontend:
-   - Open a terminal at `/client`
-   - Copy `.env.example` to `.env` and ensure `VITE_API_URL` points to `http://localhost:5000/api`
-   - Run:
-     ```
-     npm install
-     npm run dev
-     ```
-   - Vite will start (commonly at http://localhost:5173). Open in browser.
+* [cite_start]**Secure User Authentication**: Safe and secure user registration and login system using JSON Web Tokens (JWT)[cite: 1112].
+* [cite_start]**Biometric Data Logging**: Users can manually log key health metrics such as weight, heart rate, sleep duration, and steps[cite: 500].
+* **Personalized Recommendations**: Receive rule-based workout and meal plan recommendations based on your profile and activity level.
+* [cite_start]**Interactive Dashboard**: Visualize your progress with dynamic charts that track your weight over time[cite: 576, 580].
+* [cite_start]**Responsive UI**: A clean, modern, and mobile-responsive user interface built with React[cite: 1121].
 
-## Default Notes & Security
-- JWT secret in `.env` must be changed for production.
-- OpenAI integration is not included — recommendation endpoints are rule-based. You can extend them to call an AI provider.
-- This boilerplate is simplified for study/demo purposes. Add validation, rate-limiting, and stronger error handling before production.
+---
 
-## Files of interest
-- server/routes/auth.js — register/login
-- server/routes/biometric.js — log biometric data and query
-- server/routes/recommendation.js — workout & meal endpoints
-- client/src/pages/Profile.jsx — log data and request recommendations
-- client/.env.example and server/.env.example — configure these
+## 🛠️ Technology Stack
 
-## If you need further customization
-Tell me which parts you want extended (AI integration, Fitbit sync, push notifications, gamification), and I will add them.
+This project is built using the MERN stack and other modern web technologies.
 
-----
-Generated and bundled for you.
+* **Frontend**: React, React Router, Chart.js, Axios
+* **Backend**: Node.js, Express.js
+* **Database**: MongoDB (with Mongoose)
+* **Authentication**: JSON Web Tokens (JWT), bcryptjs
+
+---
+
+## 🚀 Getting Started
+
+Follow these instructions to get a local copy of the project up and running for development and testing purposes.
+
+### **Prerequisites**
+
+You will need the following software installed on your computer:
+* [Node.js](https://nodejs.org/) (v18+ recommended)
+* [npm](https://www.npmjs.com/) (included with Node.js)
+* [MongoDB](https://www.mongodb.com/try/download/community) (if running locally) or a MongoDB Atlas account.
+
+### **Installation & Setup**
+
+1.  **Clone the repository**
+    ```sh
+    git clone [https://github.com/your-username/your-repository-name.git](https://github.com/your-username/your-repository-name.git)
+    cd your-repository-name
+    ```
+
+2.  **Setup the Backend Server**
+    ```sh
+    # Navigate to the server directory
+    cd server
+
+    # Install dependencies
+    npm install
+
+    # Create a .env file and add your variables (see .env.example)
+    cp .env.example .env
+
+    # Start the server
+    npm run dev
+    ```
+    The server will be running on `http://localhost:5000`.
+
+3.  **Setup the Frontend Client**
+    ```sh
+    # Open a new terminal and navigate to the client directory
+    cd client
+
+    # Install dependencies
+    npm install
+
+    # Create a .env file (see .env.example)
+    cp .env.example .env
+
+    # Start the client
+    npm run dev
+    ```
+    The application will open automatically in your browser at `http://localhost:5173` (or another available port).
+
+---
+
+### **Environment Variables**
+
+You will need to create `.env` files in both the `/server` and `/client` directories.
+
+**`/server/.env`**
+PORT=5000
+MONGODB_URI=your_mongodb_connection_string
+JWT_SECRET=your_super_secret_key
+
+**`/client/.env`**
+## 🔮 Future Enhancements
+
+This project has a solid foundation with many opportunities for future development, as outlined in the project plan:
+
+* [cite_start]**AI-Powered Recommendations**: Integrate a true AI engine (like OpenAI or Gemini) to provide highly personalized and adaptive workout and meal plans[cite: 536, 750].
+* [cite_start]**Third-Party API Integration**: Allow users to automatically sync their data from fitness trackers like Fitbit or Google Fit[cite: 501].
+* [cite_start]**Gamification**: Introduce badges, points, and streaks to improve user engagement and motivation[cite: 622].
+* [cite_start]**Community Features**: Add the ability for users to connect with friends or book sessions with health experts[cite: 616].
