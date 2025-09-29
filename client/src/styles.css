@@ -1,0 +1,133 @@
+/* General Body & Typography */
+:root {
+  --primary-color: #2a9d8f;
+  --secondary-color: #e9c46a;
+  --background-color: #f8f9fa;
+  --text-color: #343a40;
+  --card-bg: #ffffff;
+  --border-color: #dee2e6;
+  --hover-color: #264653;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  margin: 0;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+h1, h2, h3 {
+  color: var(--hover-color);
+  margin-top: 0;
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* App Layout & Structure */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex: 1;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Header Navigation */
+.app-header {
+  background-color: var(--card-bg);
+  padding: 15px 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+.nav-links a {
+  margin-left: 20px;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+/* Card & Form Styling */
+.card {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 24px;
+  margin: 16px 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  max-width: 700px;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 450px;
+  margin: 0 auto;
+}
+
+input, select {
+  padding: 12px;
+  margin-bottom: 16px;
+  border-radius: 6px;
+  border: 1px solid var(--border-color);
+  font-size: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+button:hover {
+  background-color: var(--hover-color);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .main-content {
+    padding: 15px;
+  }
+  .app-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .nav-links {
+    margin-top: 10px;
+  }
+  .nav-links a {
+    margin-left: 0;
+    margin-right: 15px;
+  }
+}
